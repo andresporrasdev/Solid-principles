@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text/>
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>0</y>
+      <w>342</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.emoloyee::Employee
+--
+-name: String
+-email: String
+-address: String
+-salary: double
+-numberOfServiceYear: int
+-bonus: double
+-totalCompensation: double
+-renewalDate: Date
+--
++Employee(): ctor
++getName(): String
++setName(String name): void
++getEmail(): String
++setEmail(String email): void
++getAddress(): String
++setAddress(String address): void
++getSalary(): double
++setSalary(double salary): void
++getNumberOfServiceYear(): int
++setNumberOfServiceYear(int numberOfServiceYear): void
++getBonus(): double
++setBonus(double bonus): void
++getTotalCompensation(): double
++setTotalCompensation(double totalCompensation): void
++getRenewalDate(): Date
++setRenewalDate(Date renewalDate): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1665</x>
+      <y>99</y>
+      <w>405</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.controller::ValidationEmployee
+--
+--
++isValidEmployee(Employee employee): boolean
++isPresent(String value): boolean
++isValidAlphaNumeric(String value): boolean
++isValidEmail(String value): boolean
++isNoSalary(double salary): boolean
++isNoCompensation(double compensation): boolean
++isNoServiceYear(int serviceYear): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>378</y>
+      <w>432</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.emoloyee::PermanentEmployeeImpl
+--
+--
++calculateTotalCompensation(Employee employee): double
++calculateBonus(Employee employee): double
++pensionContribution(Employee employee): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>99</y>
+      <w>396</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.controller::EmployeeController
+--
+--
++processEmployee(Employee employee, Formatter formatter): String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>297</x>
+      <y>639</y>
+      <w>306</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.controller::Rate
+--
++BONUS_PERCENTAGE = 0.025: double
++PENSION_PERCENTAGE = 0.01: double
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>531</y>
+      <w>378</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.algonquin.cst8288.assignment1.emoloyee::CalculateBonus
+--
+--
++calculateBonus(Employee employee): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>0</y>
+      <w>414</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.emoloyee::ContractEmployeeImpl
+--
+--
++renewalDate(): Date
++calculateTotalCompensation(Employee employee): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>81</x>
+      <y>261</y>
+      <w>387</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.algonquin.cst8288.assignment1.emoloyee::EmployeeService
+--
+--
++calculateTotalCompensation(Employee employee): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>531</y>
+      <w>396</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.algonquin.cst8288.assignment1.emoloyee::PensionContribution
+--
+--
++pensionContribution(Employee employee): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>207</x>
+      <y>135</y>
+      <w>360</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.algonquin.cst8288.assignment1.emoloyee::RenewalDate
+--
+--
++renewalDate(): Date
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1386</x>
+      <y>693</y>
+      <w>432</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.algonquin.cst8288.assignment1.persistence::Formatter
+--
+--
++format(Employee employee, String filename, Formatter formatter): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>0</y>
+      <w>315</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.controller::Main
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>585</y>
+      <w>432</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.persistence::JSONFormatter
+--
+--
++format(Employee employee, String filename, Formatter formatter): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1377</x>
+      <y>387</y>
+      <w>450</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.persistence::PersistenceService
+--
+--
++saveEmployee(Employee person, String filename, Formatter formatter): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1656</x>
+      <y>585</y>
+      <w>432</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>com.algonquin.cst8288.assignment1.persistence::TextFormatter
+--
+--
++format(Employee employee, String filename, Formatter formatter): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>72</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>18</y>
+      <w>153</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>261</x>
+      <y>333</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>171</x>
+      <y>468</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>468</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>414</y>
+      <w>351</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1422</x>
+      <y>639</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>126</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1584</x>
+      <y>117</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>468</y>
+      <w>27</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>387</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>18</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1719</x>
+      <y>639</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1386</x>
+      <y>441</y>
+      <w>27</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1809</x>
+      <y>441</y>
+      <w>27</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1260</x>
+      <y>243</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Employee violated the Single
+Responsability Principle as
+it has a lot of functions that
+doesn't belong to the
+Employee class
+Then separated the methods 
+created in a classes called
+Tools and Employee Controller
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1440</x>
+      <y>234</y>
+      <w>288</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;80.0;300.0;80.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>297</y>
+      <w>234</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>468</x>
+      <y>261</y>
+      <w>234</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Separated interface Employee
+Services
+in four interfaces because each
+method could be implemented
+only for Permanent or Contract
+employees.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>117</x>
+      <y>27</y>
+      <w>72</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1854</x>
+      <y>477</y>
+      <w>225</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Creation of TextFormater for allow
+saving information in TXT format
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1944</x>
+      <y>531</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1350</x>
+      <y>153</y>
+      <w>27</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1539</x>
+      <y>153</y>
+      <w>27</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
